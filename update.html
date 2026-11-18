@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <link rel="stylesheet" href="VUD.css">
+</head>
+<body>
+    
+    <main class="page-shell">
+        <section class="panel form-panel">
+            <header class="page-header">
+                <p class="eyebrow">Student management</p>
+                <h1>Update student</h1>
+                <p class="page-subtitle">Edit the student details and save your changes.</p>
+            </header>
+            <p id="loadError" class="status-message" role="alert" hidden></p>
+            <form class="student-form" action="VUD.php" method="post">
+                <div class="form-field">
+                    <label for="student-id">Student ID</label>
+                    <input type="text" name="student_id" id="student-id" class="form-control" readonly>
+                </div>
+                <div class="form-field">
+                    <label for="student-name">Student Name</label>
+                    <input type="text" name="student_name" id="student-name" class="form-control" required>
+                </div>
+                <div class="form-field">
+                    <label for="student-email">Email</label>
+                    <input type="email" name="student_email" id="student-email" class="form-control" required>
+                </div>
+                <div class="form-field">
+                    <label for="student-password">New Password</label>
+                    <input type="password" name="student_password" id="student-password" class="form-control"
+                           autocomplete="new-password">
+                    <small class="field-help">Leave blank to keep the current password.</small>
+                </div>
+                <fieldset class="gender-options">
+                    <legend>Gender</legend>
+                    <div class="radio-row">
+                        <label class="radio-choice"><input type="radio" name="student_gender" value="Male" required> Male</label>
+                        <label class="radio-choice"><input type="radio" name="student_gender" value="Female" required> Female</label>
+                    </div>
+                </fieldset>
+                <div class="form-actions">
+                    <button type="submit" name="update" class="button button-primary">Save changes</button>
+                    <a href="view%26edit.html" class="button button-secondary">Cancel</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+   <script src="update.js"></script>
+</body>
+</html>

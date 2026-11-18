@@ -1,0 +1,345 @@
+:root {
+    color-scheme: light;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: #172033;
+    background: #f3f6fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 12% 10%, rgba(119, 148, 255, 0.17), transparent 34rem),
+        radial-gradient(ellipse at 90% 90%, rgba(94, 212, 190, 0.14), transparent 30rem),
+        #f3f6fb;
+}
+
+.page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 48px 20px;
+}
+
+.registration-card {
+    width: min(100%, 560px);
+    padding: 42px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(34, 50, 84, 0.12);
+}
+
+.card-header {
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    color: #5268d8;
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.14em;
+}
+
+h1 {
+    margin: 10px 0 8px;
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
+    letter-spacing: -0.045em;
+}
+
+.card-header p {
+    margin: 0;
+    color: #68748a;
+    line-height: 1.6;
+}
+
+form > fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+form > fieldset > legend {
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #edf0f5;
+    color: #27334a;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.form-field {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-field label,
+.gender-field > legend {
+    color: #354158;
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.form-field input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #dce2ec;
+    border-radius: 10px;
+    outline: none;
+    background: #fbfcfe;
+    color: #172033;
+    font: inherit;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.form-field input::placeholder {
+    color: #9aa4b5;
+}
+
+.form-field input:focus {
+    border-color: #6678e8;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 120, 232, 0.14);
+}
+
+.gender-field {
+    min-width: 0;
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+}
+
+.gender-field > legend {
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.radio-options {
+    display: flex;
+    gap: 12px;
+}
+
+.radio-option {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #dce2ec;
+    border-radius: 10px;
+    background: #fbfcfe;
+    color: #46536a;
+    cursor: pointer;
+    font-size: 0.92rem;
+}
+
+.radio-option input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #586de0;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.form-actions button {
+    min-height: 48px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.form-actions button:hover {
+    transform: translateY(-1px);
+}
+
+.form-actions button:focus-visible,
+.radio-option:focus-within {
+    outline: 3px solid rgba(102, 120, 232, 0.3);
+    outline-offset: 2px;
+}
+
+.submit-button {
+    flex: 1;
+    background: #586de0;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(88, 109, 224, 0.22);
+}
+
+.submit-button:hover {
+    background: #485dcf;
+}
+
+.reset-button {
+    background: #eef1f7;
+    color: #45516a;
+}
+
+.reset-button:hover {
+    background: #e4e8f0;
+}
+
+.result-dialog {
+    width: min(100% - 32px, 420px);
+    padding: 0;
+    border: 0;
+    border-radius: 18px;
+    color: #172033;
+    box-shadow: 0 24px 70px rgba(34, 50, 84, 0.24);
+}
+
+.result-dialog::backdrop {
+    background: rgba(23, 32, 51, 0.48);
+    backdrop-filter: blur(3px);
+}
+
+.dialog-content {
+    padding: 32px;
+}
+
+.dialog-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+}
+
+.dialog-content p {
+    margin: 0;
+    color: #68748a;
+    line-height: 1.6;
+}
+
+.account-details {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0 0;
+    padding: 16px;
+    border-radius: 12px;
+    background: #f3f6fb;
+}
+
+.account-details[hidden] {
+    display: none;
+}
+
+.account-details div {
+    display: grid;
+    gap: 4px;
+}
+
+.account-details dt {
+    color: #68748a;
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+
+.account-details dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.dialog-actions button {
+    min-height: 44px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dialog-actions button:focus-visible {
+    outline: 3px solid rgba(102, 120, 232, 0.3);
+    outline-offset: 2px;
+}
+
+.dialog-view-button {
+    margin-right: auto;
+    background: #eef1f7;
+    color: #45516a;
+}
+
+.dialog-view-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.dialog-ok-button {
+    background: #586de0;
+    color: #fff;
+}
+
+.preview-note {
+    margin: 0;
+    color: #68748a;
+    line-height: 1.6;
+}
+
+.preview-details {
+    margin: 0 0 24px;
+}
+
+.preview-error {
+    margin: 0 0 24px;
+    color: #a32727;
+    line-height: 1.6;
+}
+
+.back-to-form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: 10px;
+    background: #586de0;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-to-form:focus-visible {
+    outline: 3px solid rgba(102, 120, 232, 0.3);
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 24px 14px;
+    }
+
+    .registration-card {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}

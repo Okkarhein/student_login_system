@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="VUD.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="page-header">
+            <p class="eyebrow">Student management</p>
+            <h1>Students</h1>
+            <p class="page-subtitle">View and manage registered student accounts.</p>
+            <a class="button button-secondary back-button" href="index.html">Back to registration</a>
+        </header>
+        <section class="panel table-scroll" aria-label="Registered students">
+        <table class="students-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+        </table>
+        </section>
+        <p id="loadError" class="status-message" role="alert" hidden></p>
+    </main>
+
+  <script src="view&edit.js"></script>
+</body>
+</html>

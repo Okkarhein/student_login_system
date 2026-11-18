@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="registration-card" aria-labelledby="page-title">
+            <header class="card-header">
+                <span class="eyebrow">WELCOME</span>
+                <h1 id="page-title">Student Registration</h1>
+                <p>Enter your details below to create your student account.</p>
+            </header>
+
+            <form id="registration-form" action="datainput.php" method="post">
+                <input type="hidden" name="submit" value="1">
+                <fieldset>
+                    <legend>Personal information</legend>
+
+                    <div class="form-field">
+                        <label for="student-name">Student name</label>
+                        <input id="student-name" type="text" name="student_name"
+                               placeholder="e.g. Okkar Hein" autocomplete="name" required>
+                    </div>
+
+                    <fieldset class="gender-field">
+                        <legend>Gender</legend>
+                        <div class="radio-options">
+                            <label class="radio-option">
+                                <input type="radio" name="student_gender" value="Male" required>
+                                <span>Male</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="student_gender" value="Female" required>
+                                <span>Female</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-field">
+                        <label for="student-email">Email address</label>
+                        <input id="student-email" type="email" name="student_email"
+                               placeholder="you@example.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="student-password">Password</label>
+                        <input id="student-password" type="password" name="student_password"
+                               placeholder="Enter a password" autocomplete="new-password" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="submit-button" type="submit">Create account</button>
+                        <button id="view-records" class="reset-button" type="button">View</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <dialog id="result-dialog" class="result-dialog"
+            aria-labelledby="dialog-title" aria-describedby="dialog-message">
+        <div class="dialog-content">
+            <h2 id="dialog-title">Review your information</h2>
+            <p id="dialog-message"></p>
+            <div class="dialog-actions">
+                <button id="confirm-save" class="dialog-ok-button" type="button">OK</button>
+                <button id="view-entry" class="dialog-view-button" type="button" hidden>View</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
